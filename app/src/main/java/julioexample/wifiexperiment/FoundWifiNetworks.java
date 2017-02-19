@@ -74,17 +74,21 @@ public class FoundWifiNetworks extends ListActivity {
                     List<WifiObject> readings = new ArrayList<>();
 
                     for (ScanResult result : results) {
-                        readings.add(new WifiObject(result));
+                       readings.add(new WifiObject(result));
+                        arrayOfFoundWifiNetworks.add(new WifiObject(result));
 
                     }
 
-                    
+
+
+
+
 //hay que pasar el contenido de readings al adapter
 
-                   /* FoundWifiNetworksAdapter adapter = new FoundWifiNetworksAdapter(getApplicationContext(), arrayOfFoundWifiNetworks);
+                   FoundWifiNetworksAdapter adapter = new FoundWifiNetworksAdapter(getApplicationContext(), arrayOfFoundWifiNetworks);
 
                     // 2. setListAdapter
-                    setListAdapter(adapter);*/
+                    setListAdapter(adapter);
                 }
             }
         };
